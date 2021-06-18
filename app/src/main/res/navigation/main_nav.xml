@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.swetajain.viewpagerwithnavigation.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/startFragmentOne"
+        android:name="com.swetajain.viewpagerwithnavigation.StartFragmentOne"
+        android:label="fragment_start_one"
+        tools:layout="@layout/fragment_start_one" />
+    <fragment
+        android:id="@+id/startFragmentTwo"
+        android:name="com.swetajain.viewpagerwithnavigation.StartFragmentTwo"
+        android:label="fragment_start_two"
+        tools:layout="@layout/fragment_start_two" />
+    <fragment
+        android:id="@+id/startFragmentThree"
+        android:name="com.swetajain.viewpagerwithnavigation.StartFragmentThree"
+        android:label="fragment_start_three"
+        tools:layout="@layout/fragment_start_three" />
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.swetajain.viewpagerwithnavigation.viewpager.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" />
+</navigation>
